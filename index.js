@@ -6,11 +6,9 @@ console.log(capitalizeStrings(words)); // ["Apple", "Banana", "Kiwi", "Orange"]
 /////////////////////////////////////////////////////////////////////////////
 const findCommonElements = (arr1, arr2) => {
   const uniqueVal = (arr) => arr.filter((el, id) => arr.indexOf(el) === id);
-  const generalElement = (arr) =>
-    arr.filter((el, id) => arr.indexOf(el) !== id);
- 
-  return generalElement(uniqueVal(arr1).concat(uniqueVal(arr2)));
+  const generalElement = (arr) => arr.filter((el, id) => arr.indexOf(el) !== id);
 
+  return generalElement(uniqueVal(arr1).concat(uniqueVal(arr2)));
 };
 
 const array1 = [1, 2, 3, 4, 5, 5, 3, 3, 5];
@@ -22,8 +20,8 @@ const analyzeArray = (arr) => {
   return (newObject = {
     sum: arr.reduce((acc, cur) => acc + cur, 0),
     average: arr.reduce((acc, cur) => acc + cur, 0) / arr.length,
-    min: Math.min(...arr), 
-    max: Math.max(...arr), 
+    min: Math.min(...arr),
+    max: Math.max(...arr),
   });
 };
 
